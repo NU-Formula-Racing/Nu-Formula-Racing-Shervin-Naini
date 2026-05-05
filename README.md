@@ -1,3 +1,7 @@
+Strain-Gauge & Airspeed Printed Circuit Board Firmware:
+
+Hello! Thanks for stopping by, below are some of the skills I learned and applied this year for Northwestern Formula.
+
 1. Strain Gauge Integration & Signal Conditioning
 Developed the firmware logic to interface with high-resolution ADCs to monitor chassis and suspension loading in real-time.
 
