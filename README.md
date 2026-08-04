@@ -1,35 +1,35 @@
-Strain-Gauge & Airspeed Printed Circuit Board Firmware:
-
-Hello! Thanks for stopping by, below are some of the skills I learned and applied this year for Northwestern Formula.
-
-1. Strain Gauge Integration & Signal Conditioning
-Developed the firmware logic to interface with high-resolution ADCs to monitor chassis and suspension loading in real-time.
-
-Precision Sampling: Implemented I^2C communication with the onboard ADCs, utilizing hardware interrupts to ensure consistent sampling rates!!
-
-Calibration Routine: Integrated a zero-offset calibration function triggered during pre-run sequences to account for ambient thermal drift.
-
-2. Pitot Tube & Airspeed Processing
-Engineered the driver for the differential pressure sensor used in the vehicle's Pitot-static system.
-
-Dynamic Pressure Calculation: Implemented the Bernoulli-based conversion logic to translate raw voltage/pressure differentials into knots and m/s.
-
-Altitude Compensation: Integrated ambient temperature and atmospheric pressure variables to maintain airspeed accuracy across varying track conditions.
-
-3. CAN Bus Architecture
-Data Packaging: Designed the CAN frame structure to broadcast strain and airspeed telemetry across the vehicle network.
-
-Priority Management: Optimized message IDs to ensure critical aerodynamic and structural data maintain high bus priority during high-bandwidth operation.
-
-Logging: Synchronized sensor timestamps with the central logger to allow for post-run correlation between vehicle speed and suspension travel.
-
-Technical Stack
-Languages: C, C++ (Embedded)
-
-Protocols: CAN, I2C
-
-Hardware: Microcontrollers (ESP32), Differential Pressure Sensors, 
-
-Hardware Skills: PCB Design (Altium Designer)
-
-
+# Strain-Gauge & Airspeed PCB Firmware
+Firmware for Northwestern Formula Racing’s strain-gauge and airspeed sensing boards — real-time chassis/suspension load monitoring and Pitot-static airspeed over CAN.
+## Overview
+This project covers embedded firmware for printed circuit boards that:
+- Read high-resolution strain-gauge ADCs for chassis and suspension loading
+- Drive a differential pressure (Pitot) sensor for vehicle airspeed
+- Broadcast calibrated telemetry on the vehicle CAN bus for logging and analysis
+Built for Northwestern Formula Racing (FSAE).
+## Features
+### Strain Gauge Integration & Signal Conditioning
+- Firmware interface to high-resolution ADCs for real-time chassis and suspension load monitoring
+- I²C communication with onboard ADCs, using hardware interrupts for consistent sampling rates
+- Zero-offset calibration routine for pre-run sequences to correct ambient thermal drift
+### Pitot Tube & Airspeed Processing
+- Driver for the differential pressure sensor in the Pitot-static system
+- Bernoulli-based conversion from raw pressure differentials to knots and m/s
+- Altitude compensation using ambient temperature and atmospheric pressure for track conditions
+### CAN Bus Architecture
+- CAN frame design for broadcasting strain and airspeed telemetry on the vehicle network
+- Message ID prioritization so critical aero/structural data stays high-priority under load
+- Timestamp sync with the central logger for post-run correlation (e.g. speed vs. suspension travel)
+## Technical Stack
+| Area | Tools / Tech |
+|------|----------------|
+| Languages | C, C++ (embedded) |
+| Protocols | CAN, I²C |
+| Hardware | ESP32, differential pressure sensors, strain-gauge ADCs |
+| Design | PCB design in Altium Designer |
+## Skills Applied
+- Embedded firmware (C/C++)
+- ADC sampling & interrupt-driven I²C
+- Sensor calibration & signal conditioning
+- Aerodynamic airspeed computation
+- CAN messaging & vehicle telemetry
+- Altium PCB design
